@@ -1,0 +1,1137 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>True Eggers - Marketing Communications & Sports Professional</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Raleway:400,800,900" rel="stylesheet">
+	<style>
+		/* Reset */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		html, body {
+			height: 100%;
+		}
+
+		body {
+			background: linear-gradient(135deg, #f5f5dc 0%, #e8dcc4 50%, #d4c4b0 100%);
+			color: #4a3428;
+			font-family: 'Source Sans Pro', Helvetica, sans-serif;
+			font-size: 16pt;
+			font-weight: 400;
+			line-height: 1.75;
+			padding-top: 3.5em;
+		}
+
+		a {
+			transition: color 0.2s ease, border-bottom-color 0.2s ease;
+			border-bottom: dotted 1px rgba(139, 47, 57, 0.3);
+			color: inherit;
+			text-decoration: none;
+		}
+
+		a:hover {
+			border-bottom-color: transparent;
+			color: #8b2f39;
+		}
+
+		/* Exception for header nav links - they have their own hover styles */
+		#header nav.links a:hover {
+			color: #f5f5dc !important;
+		}
+
+		strong, b {
+			color: #6b4423;
+			font-weight: 700;
+		}
+
+		em, i {
+			font-style: italic;
+		}
+
+		/* Icon styling fix */
+		.icon:before {
+			font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
+			font-weight: 900;
+		}
+
+		.icon.brands:before {
+			font-family: "Font Awesome 6 Brands";
+		}
+
+		p {
+			margin: 0 0 2em 0;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			color: #8b2f39;
+			font-family: 'Raleway', Helvetica, sans-serif;
+			font-weight: 800;
+			letter-spacing: 0.25em;
+			line-height: 1.65;
+			margin: 0 0 1em 0;
+			text-transform: uppercase;
+		}
+
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+			color: inherit;
+			border-bottom: 0;
+		}
+
+		h1 {
+			font-size: 2.5em;
+		}
+
+		h2 {
+			font-size: 1.1em;
+		}
+
+		h3 {
+			font-size: 0.9em;
+		}
+
+		h4 {
+			font-size: 0.7em;
+		}
+
+		hr {
+			border: 0;
+			border-bottom: solid 1px rgba(139, 47, 57, 0.3);
+			margin: 2em 0;
+		}
+
+		/* Header */
+		#header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: rgba(255, 255, 255, 0.95);
+			border-bottom: solid 2px #8b2f39;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+			height: 3.5em;
+			left: 0;
+			line-height: 3.5em;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 10000;
+			padding: 0 3em;
+		}
+
+		#header h1 {
+			font-size: 1em;
+			margin: 0;
+		}
+
+		#header h1 a {
+			border: 0;
+			color: #8b2f39;
+		}
+
+		#header nav.links {
+			flex: 1;
+		}
+
+		#header nav.links ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			gap: 0.5em;
+		}
+
+		#header nav.links ul li {
+			display: inline-block;
+		}
+
+		#header nav.links ul li a {
+			border: 0;
+			color: #6b4423;
+			display: inline-block;
+			font-family: 'Raleway', Helvetica, sans-serif;
+			font-size: 0.6em;
+			font-weight: 800;
+			letter-spacing: 0.25em;
+			text-transform: uppercase;
+			padding: 0.5em 1.5em;
+			background: rgba(245, 245, 220, 0.3);
+			border-radius: 20px;
+			transition: all 0.3s ease;
+		}
+
+		#header nav.links ul li a:hover,
+		#header nav.links ul li a.active {
+			color: #f5f5dc;
+			background: #8b2f39;
+			transform: translateY(-2px);
+			box-shadow: 0 4px 8px rgba(139, 47, 57, 0.3);
+		}
+
+		#header nav.main ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		#header nav.main ul li {
+			display: inline-block;
+			margin-left: 1em;
+		}
+
+		#header .menu-toggle {
+			display: none;
+		}
+
+		/* Wrapper */
+		#wrapper {
+			display: flex;
+			flex-direction: row-reverse;
+			margin: 0 auto;
+			max-width: 100%;
+			padding: 4.5em;
+			width: 90em;
+		}
+
+		/* Main */
+		#main {
+			flex-grow: 1;
+			width: 100%;
+		}
+
+		/* Sidebar */
+		#sidebar {
+			margin-right: 3em;
+			min-width: 22em;
+			width: 22em;
+		}
+
+		#sidebar > section {
+			border-top: solid 2px rgba(139, 47, 57, 0.3);
+			margin: 3em 0 0 0;
+			padding: 3em 0 0 0;
+		}
+
+		#sidebar > section:first-child {
+			border-top: 0;
+			margin-top: 0;
+			padding-top: 0;
+		}
+
+		/* Intro */
+		#intro .logo {
+			border-bottom: 0;
+			display: inline-block;
+			margin: 0 0 1em 0;
+			overflow: hidden;
+			position: relative;
+			width: 8em;
+			height: 8em;
+			border-radius: 50%;
+			border: 3px solid #8b2f39;
+			box-shadow: 0 0 20px rgba(139, 47, 57, 0.3);
+		}
+
+		#intro .logo img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		#intro header h2 {
+			font-size: 2em;
+			font-weight: 900;
+			color: #8b2f39;
+		}
+
+		#intro header p {
+			font-size: 0.8em;
+			color: #6b4423;
+		}
+
+		/* Post */
+		.post {
+			padding: 3em 0;
+		}
+
+		.post header {
+			display: flex;
+			align-items: flex-start;
+			margin: 0 0 2em 0;
+		}
+
+		.post header .title {
+			flex-grow: 1;
+		}
+
+		.post header .title h2 {
+			font-size: 1.5em;
+			color: #8b2f39;
+		}
+
+		.post header .title p {
+			color: #6b4423;
+			font-family: 'Raleway', Helvetica, sans-serif;
+			font-size: 0.7em;
+			font-weight: 400;
+			letter-spacing: 0.25em;
+			margin-top: -1em;
+			text-transform: uppercase;
+		}
+
+		/* Skills Grid */
+		.skills-grid, .experience-grid, .projects-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 2em;
+			margin: 2em 0;
+		}
+
+		.card {
+			background: rgba(255, 255, 255, 0.8);
+			border: solid 2px rgba(139, 47, 57, 0.2);
+			padding: 2em;
+			transition: transform 0.2s ease, box-shadow 0.2s ease;
+			box-shadow: 0 2px 10px rgba(139, 47, 57, 0.1);
+		}
+
+		.card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 30px rgba(139, 47, 57, 0.2);
+			border-color: #8b2f39;
+		}
+
+		.card h3 {
+			color: #8b2f39;
+			margin-bottom: 1em;
+		}
+
+		.card ul {
+			list-style: none;
+			padding: 0;
+		}
+
+		.card ul li {
+			padding: 0.5em 0;
+			border-bottom: dotted 1px rgba(139, 47, 57, 0.2);
+		}
+
+		.card ul li:last-child {
+			border-bottom: 0;
+		}
+
+		/* Experience Card */
+		.experience-card {
+			background: rgba(255, 255, 255, 0.8);
+			border: solid 2px rgba(139, 47, 57, 0.2);
+			padding: 2em;
+			margin-bottom: 2em;
+			box-shadow: 0 2px 10px rgba(139, 47, 57, 0.1);
+		}
+
+		.experience-card h3 {
+			color: #8b2f39;
+			font-size: 1.2em;
+		}
+
+		.experience-card h4 {
+			color: #6b4423;
+			font-size: 0.8em;
+			margin: 0.5em 0;
+		}
+
+		.experience-card .date {
+			color: #8b2f39;
+			font-size: 0.7em;
+			font-family: 'Raleway', Helvetica, sans-serif;
+			letter-spacing: 0.25em;
+			text-transform: uppercase;
+			font-weight: 800;
+		}
+
+		/* Education Card */
+		.education-card {
+			background: rgba(255, 255, 255, 0.8);
+			border: solid 2px rgba(139, 47, 57, 0.2);
+			padding: 2em;
+			margin-bottom: 2em;
+			box-shadow: 0 2px 10px rgba(139, 47, 57, 0.1);
+		}
+
+		.education-card h3 {
+			color: #8b2f39;
+			font-size: 1.2em;
+		}
+
+		.education-card h4 {
+			color: #6b4423;
+			font-size: 0.8em;
+			margin: 0.5em 0;
+		}
+
+		/* Blurb */
+		.blurb h2 {
+			font-size: 1.1em;
+		}
+
+		.blurb p {
+			font-size: 0.9em;
+		}
+
+		/* Icons */
+		.icons {
+			cursor: default;
+			list-style: none;
+			padding: 0;
+		}
+
+		.icons li {
+			display: inline-block;
+			padding: 0 1em 0 0;
+		}
+
+		.icons li:last-child {
+			padding-right: 0;
+		}
+
+		.icons li a {
+			border-radius: 100%;
+			box-shadow: inset 0 0 0 1px #8b2f39;
+			display: inline-block;
+			height: 2.25em;
+			line-height: 2.25em;
+			text-align: center;
+			width: 2.25em;
+			color: #8b2f39;
+			border-bottom: 0 !important;
+			transition: all 0.3s ease;
+		}
+
+		.icons li a:hover {
+			background-color: #8b2f39;
+			color: #f5f5dc !important;
+		}
+
+		.icons li a i {
+			transition: color 0.3s ease;
+		}
+
+		/* Footer */
+		#footer {
+			text-align: center;
+			margin-top: 3em;
+			padding: 3em 0;
+			border-top: solid 2px rgba(139, 47, 57, 0.3);
+		}
+
+		#footer .icons {
+			color: #8b2f39;
+		}
+
+		#footer .copyright {
+			color: #6b4423;
+			font-family: 'Raleway', Helvetica, sans-serif;
+			font-size: 0.5em;
+			font-weight: 400;
+			letter-spacing: 0.25em;
+			text-transform: uppercase;
+		}
+
+		/* Actions */
+		.actions {
+			cursor: default;
+			list-style: none;
+			padding-left: 0;
+		}
+
+		.actions li {
+			display: inline-block;
+			padding: 0 1em 0 0;
+			vertical-align: middle;
+		}
+
+		.actions li:last-child {
+			padding-right: 0;
+		}
+
+		/* Button */
+		.button {
+			appearance: none;
+			background-color: transparent;
+			border: 0;
+			border-radius: 20px;
+			border: solid 2px #8b2f39;
+			color: #8b2f39 !important;
+			cursor: pointer;
+			display: inline-block;
+			font-family: 'Raleway', Helvetica, sans-serif;
+			font-size: 0.6em;
+			font-weight: 800;
+			height: 3.5em;
+			letter-spacing: 0.25em;
+			line-height: 3.5em;
+			padding: 0 1.75em;
+			text-align: center;
+			text-decoration: none;
+			text-transform: uppercase;
+			white-space: nowrap;
+			transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		}
+
+		.button:hover {
+			background-color: #8b2f39;
+			border-color: #8b2f39;
+			color: #f5f5dc !important;
+		}
+
+		/* Responsive */
+		@media screen and (max-width: 1280px) {
+			#wrapper {
+				display: block;
+			}
+
+			#sidebar {
+				border-top: solid 2px rgba(139, 47, 57, 0.3);
+				margin: 3em 0 0 0;
+				min-width: 0;
+				padding: 3em 0 0 0;
+				width: 100%;
+			}
+
+			#intro {
+				margin: 0 0 3em 0;
+				text-align: center;
+			}
+		}
+
+		@media screen and (max-width: 980px) {
+			body {
+				font-size: 14pt;
+			}
+
+			#wrapper {
+				padding: 3em;
+			}
+
+			#header nav.links {
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 736px) {
+			body {
+				font-size: 12pt;
+			}
+
+			#wrapper {
+				padding: 1.5em;
+			}
+
+			#header {
+				height: 2.75em;
+				line-height: 2.75em;
+				padding: 0 1em;
+			}
+
+			#header h1 {
+				font-size: 0.9em;
+			}
+
+			.skills-grid, .experience-grid, .projects-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		/* Mini Posts */
+		.mini-posts {
+			margin: 0 0 2em 0;
+		}
+
+		.mini-post {
+			border-top: solid 2px rgba(139, 47, 57, 0.3);
+			margin: 2em 0 0 0;
+			padding: 2em 0 0 0;
+		}
+
+		.mini-post:first-child {
+			border-top: 0;
+			margin-top: 0;
+			padding-top: 0;
+		}
+
+		.mini-post header h3 {
+			font-size: 0.9em;
+			color: #8b2f39;
+		}
+
+		.highlight {
+			color: #8b2f39;
+			font-weight: bold;
+		}
+
+		/* Gallery Styles */
+		.gallery-item {
+			margin-bottom: 2em;
+		}
+
+		.gallery-image {
+			border: 2px solid rgba(139, 47, 57, 0.3);
+			border-radius: 8px;
+			overflow: hidden;
+			transition: all 0.3s ease;
+			margin-bottom: 0.5em;
+		}
+
+		.gallery-image:hover {
+			border-color: #8b2f39;
+			box-shadow: 0 5px 15px rgba(139, 47, 57, 0.2);
+			transform: translateY(-3px);
+		}
+
+		.gallery-image img {
+			width: 100%;
+			height: auto;
+			display: block;
+			transition: transform 0.3s ease;
+		}
+
+		.gallery-image:hover img {
+			transform: scale(1.05);
+		}
+
+		.gallery-caption {
+			font-size: 0.8em;
+			color: #6b4423;
+			line-height: 1.5;
+			margin: 0.5em 0 0 0;
+			text-align: center;
+		}
+	</style>
+</head>
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header">
+		<h1><a href="#home">True Eggers</a></h1>
+		<nav class="links">
+			<ul>
+				<li><a href="#about">About</a></li>
+				<li><a href="#experience">Experience</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#education">Education</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+		<nav class="main">
+			<ul>
+				<li class="menu">
+					<a class="fa-bars menu-toggle" href="#menu">Menu</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- About Section -->
+			<article id="about" class="post">
+				<header>
+					<div class="title">
+						<h2>About Me</h2>
+						<p>Marketing Communications Professional & Student-Athlete</p>
+					</div>
+				</header>
+				<p>Currently pursuing a degree in <span class="highlight">Advertising and Marketing Communications</span> at the Fashion Institute of Technology, I combine strategic marketing expertise with authentic sports industry experience. As a bilingual professional fluent in English and Spanish, I bridge cultures and communities through compelling brand narratives.</p>
+				
+				<p>My background as a <span class="highlight">Division III student-athlete</span> and team captain has shaped my approach to marketing—discipline, teamwork, and the drive to exceed expectations. From working with professional teams like <span class="highlight">New York City FC</span> to grassroots sports organizations, I understand how sports unite people and build lasting community connections.</p>
+				
+				<p>I'm passionate about leveraging marketing to enhance fan engagement, build authentic brand partnerships, and create memorable experiences that resonate with diverse audiences. Whether it's developing digital content strategies, coordinating live events, or executing community outreach initiatives, I bring energy, creativity, and a results-driven mindset to every project.</p>
+			</article>
+
+			<!-- Experience Section -->
+			<article id="experience" class="post">
+				<header>
+					<div class="title">
+						<h2>Professional Experience</h2>
+						<p>Building Communities Through Sports</p>
+					</div>
+				</header>
+
+				<div class="experience-card">
+					<div class="date">Aug. 2025 - Present</div>
+					<h3>United Nations International School (UNIS)</h3>
+					<h4>Girls' High School Varsity Coach</h4>
+					<p><strong>Location:</strong> New York, NY</p>
+					<ul>
+						<li>Develop and lead custom training sessions tailored to high school varsity soccer</li>
+						<li>Analyze game footage and apply findings to video sessions and training sessions to improve team performance</li>
+						<li>Foster a positive team environment for young players ensuring their safety and health</li>
+					</ul>
+				</div>
+
+				<div class="experience-card">
+					<div class="date">May 2024 - Present</div>
+					<h3>New York City Football Club (NYCFC)</h3>
+					<h4>Street Team and Match Presentation</h4>
+					<p><strong>Location:</strong> New York, NY</p>
+					<ul>
+						<li>Serve as ambassador for club at community building events communicating in English and Spanish</li>
+						<li>Execute operational tasks so events run smoothly</li>
+						<li>Build and operate event activations for pre-game and during game activities</li>
+					</ul>
+				</div>
+
+				<div class="experience-card">
+					<div class="date">May 2024 - Jan 2025</div>
+					<h3>Volo Sports</h3>
+					<h4>Membership Marketing and Sales Associate</h4>
+					<p><strong>Location:</strong> New York, NY</p>
+					<ul>
+						<li>Built and Maintained daily programs within tech system, keeping digital record using Excel</li>
+						<li>Created weekly and daily promotional content for email and mobile app distribution</li>
+						<li>Conducted market research within target market and participated in grassroots and social media marketing efforts to enhance membership experience</li>
+					</ul>
+				</div>
+
+				<div class="experience-card">
+					<div class="date">Jan 2025 - May 2025</div>
+					<h3>Fashion Institute of Technology</h3>
+					<h4>Administrative Assistant in Payroll Office</h4>
+					<p><strong>Location:</strong> New York, NY</p>
+					<ul>
+						<li>Digitized thousands of files and developed excel system for digital recording</li>
+						<li>Converted PDF's into fillable documents using Adobe Illustrator</li>
+					</ul>
+				</div>
+
+				<div class="experience-card">
+					<div class="date">Nov 2022 - May 2023</div>
+					<h3>SUSA Soccer Academy</h3>
+					<h4>Youth Soccer Coach</h4>
+					<p><strong>Location:</strong> Central Islip, NY</p>
+					<ul>
+						<li>Developed training sessions for children aged 2-14</li>
+						<li>Designated field space for children based on age group and skill levels</li>
+					</ul>
+					<p><strong>Field Marshall</strong></p>
+					<ul>
+						<li>Collected statistics from multiple games at the same time and uploaded assists, goals, fouls, red/yellow cards, shots, and shots on goal to Excel spreadsheet</li>
+					</ul>
+				</div>
+			</article>
+
+			<!-- Skills Section -->
+			<article id="skills" class="post">
+				<header>
+					<div class="title">
+						<h2>Skills & Expertise</h2>
+						<p>Strategic Marketing & Digital Communications</p>
+					</div>
+				</header>
+
+				<div class="skills-grid">
+					<div class="card">
+						<h3>Marketing & Communications</h3>
+						<ul>
+							<li>Brand Strategy & Positioning</li>
+							<li>Social Media Marketing</li>
+							<li>Content Creation & Copywriting</li>
+							<li>Email Marketing Campaigns</li>
+							<li>Market Research & Analysis</li>
+							<li>Community Engagement</li>
+							<li>Event Marketing</li>
+							<li>Bilingual Marketing (English/Spanish)</li>
+						</ul>
+					</div>
+
+					<div class="card">
+						<h3>Digital & Technical</h3>
+						<ul>
+							<li>Adobe Creative Suite (Illustrator, Photoshop)</li>
+							<li>Microsoft Excel (Data Management)</li>
+							<li>Digital Content Management Systems</li>
+							<li>Social Media Platforms & Analytics</li>
+							<li>Email Marketing Tools</li>
+							<li>Basic Web Design Principles</li>
+							<li>Video Editing & Analysis</li>
+							<li>Database Management</li>
+						</ul>
+					</div>
+
+					<div class="card">
+						<h3>Sports Industry</h3>
+						<ul>
+							<li>Fan Engagement Strategies</li>
+							<li>Sports Event Operations</li>
+							<li>Athlete Program Development</li>
+							<li>Game Day Activations</li>
+							<li>Community Relations</li>
+							<li>Grassroots Marketing</li>
+							<li>Team Leadership & Coaching</li>
+							<li>Performance Analysis</li>
+						</ul>
+					</div>
+
+					<div class="card">
+						<h3>Professional Strengths</h3>
+						<ul>
+							<li>Bilingual Communication (English & Spanish)</li>
+							<li>Cross-Cultural Competency</li>
+							<li>Team Leadership & Collaboration</li>
+							<li>Project Management</li>
+							<li>Time Management</li>
+							<li>Public Speaking & Presentation</li>
+							<li>Problem-Solving Under Pressure</li>
+							<li>Adaptability & Initiative</li>
+						</ul>
+					</div>
+				</div>
+			</article>
+
+			<!-- Projects Section -->
+			<article id="projects" class="post">
+				<header>
+					<div class="title">
+						<h2>Key Projects & Initiatives</h2>
+						<p>Marketing Campaigns & Community Impact</p>
+					</div>
+				</header>
+
+				<div class="projects-grid">
+					<div class="card">
+						<h3>NYCFC Community Activations</h3>
+						<p><strong>Role:</strong> Street Team Ambassador</p>
+						<p>Executed bilingual (English/Spanish) fan engagement initiatives at community events, creating memorable brand experiences that strengthened NYCFC's connection with diverse NYC neighborhoods. Managed event logistics and activations for match day presentations.</p>
+					</div>
+
+					<div class="card">
+						<h3>Volo Sports Membership Growth Campaign</h3>
+						<p><strong>Role:</strong> Marketing & Sales Associate</p>
+						<p>Developed and distributed weekly promotional content across email and mobile platforms. Conducted market research and implemented grassroots marketing strategies that enhanced member experience and drove community participation in recreational sports leagues.</p>
+					</div>
+
+					<div class="card">
+						<h3>Youth Soccer Development Program</h3>
+						<p><strong>Role:</strong> Varsity Coach & Youth Trainer</p>
+						<p>Created age-appropriate training curricula for athletes ranging from 2-14 years old and high school varsity level. Utilized video analysis to improve team performance and fostered inclusive, safe environments prioritizing player development and health.</p>
+					</div>
+
+					<div class="card">
+						<h3>Digital Systems Optimization - FIT Payroll</h3>
+						<p><strong>Role:</strong> Administrative Assistant</p>
+						<p>Digitized thousands of files and developed Excel-based tracking systems for improved operational efficiency. Created fillable PDF documents using Adobe Illustrator to streamline administrative processes.</p>
+					</div>
+
+					<div class="card">
+						<h3>Statistical Analysis & Reporting</h3>
+						<p><strong>Role:</strong> Field Marshall - SUSA Soccer Academy</p>
+						<p>Managed real-time data collection across multiple simultaneous games, tracking goals, assists, fouls, cards, and shots. Developed Excel-based reporting systems to provide coaches with actionable performance insights.</p>
+					</div>
+
+					<div class="card">
+						<h3>Volunteer Community Outreach</h3>
+						<p><strong>Role:</strong> West Side Campaign Against Hunger</p>
+						<p>Provided bilingual support for poverty alleviation efforts, serving as translator and facilitating communication with English and Spanish-speaking community members in need of assistance.</p>
+					</div>
+				</div>
+			</article>
+
+			<!-- Education Section -->
+			<article id="education" class="post">
+				<header>
+					<div class="title">
+						<h2>Education</h2>
+						<p>Academic Excellence & Athletic Achievement</p>
+					</div>
+				</header>
+
+				<div class="education-card">
+					<h3>Fashion Institute of Technology (FIT)</h3>
+					<h4>Bachelor of Science in Advertising and Marketing Communications</h4>
+					<div class="date">2024 - 2026 | New York, NY</div>
+					<p><strong>Minor:</strong> Psychology</p>
+					<p><strong>Academic Honors:</strong></p>
+					<ul>
+						<li>Dean's List 2024, 2025</li>
+						<li>Phi Theta Kappa Honors Society</li>
+						<li>Captains of Women's Soccer Team</li>
+						<li>2024 Region XV Player of the Year and MVP</li>
+					</ul>
+					<p><strong>Relevant Coursework:</strong></p>
+					<ul>
+						<li>Consumer Behavior & Psychology</li>
+						<li>Digital Marketing Strategies</li>
+						<li>Brand Management</li>
+						<li>Marketing Research & Analytics</li>
+						<li>Integrated Marketing Communications</li>
+						<li>Social Media Marketing</li>
+						<li>Creative Strategy & Copywriting</li>
+						<li>Global Marketing Perspectives</li>
+					</ul>
+				</div>
+
+				<div class="education-card">
+					<h3>Universitat de Barcelona</h3>
+					<h4>School of Economics and Business</h4>
+					<div class="date">Spring 2025 | Barcelona, Spain</div>
+					<p><strong>Study Abroad Program:</strong></p>
+					<ul>
+						<li>Gilman Scholarship Recipient</li>
+						<li>International business and marketing coursework</li>
+						<li>Cross-cultural marketing strategies</li>
+						<li>European market analysis</li>
+					</ul>
+				</div>
+
+				<div class="education-card">
+					<h3>Farmingdale State College</h3>
+					<h4>Architectural Engineering Major</h4>
+					<div class="date">2022 - 2024 | Long Island, NY</div>
+					<p>Excelled as a student-athlete, earning <strong>President's List honors</strong> while competing on the women's soccer team. Demonstrated exceptional ability to balance rigorous STEM coursework with Division III athletics, developing strong time management and discipline.</p>
+					<p><strong>Athletic & Academic Achievements:</strong></p>
+					<ul>
+						<li>President's List 2022-2024</li>
+						<li>Captain of Women's Soccer Team</li>
+						<li>2024 Region XV Player of the Year and MVP</li>
+						<li>Balanced engineering studies with competitive athletics</li>
+						<li>Leadership and teamwork excellence</li>
+						<li>Technical problem-solving skills from engineering coursework</li>
+					</ul>
+				</div>
+			</article>
+
+			<!-- Contact Section -->
+			<article id="contact" class="post">
+				<header>
+					<div class="title">
+						<h2>Let's Connect</h2>
+						<p>Available for Opportunities in Sports Marketing & Communications</p>
+					</div>
+				</header>
+
+				<div style="margin: 2em 0;">
+					<h3>Contact Information</h3>
+					<p>
+						<strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#e6929493d58383a6818b878f8ac885898b"><span class="__cf_email__" data-cfemail="a7d3d5d294c2c2e7c0cac6cecb89c4c8ca">[email&#160;protected]</span></a><br>
+						<strong>Phone:</strong> <a href="tel:+19173247360">917-324-7360</a><br>
+						<strong>LinkedIn:</strong> <a href="https://linkedin.com/in/true-eggers101" target="_blank">linkedin.com/in/true-eggers101</a><br>
+						<strong>Location:</strong> New York City, NY
+					</p>
+				</div>
+
+				<div class="skills-grid" style="margin-top: 3em;">
+					<div class="card">
+						<h3>📍 Location</h3>
+						<p>New York City, New York</p>
+						<p>Available for NYC metro area opportunities</p>
+						<p>Open to remote/hybrid arrangements</p>
+						<p>Willing to relocate for right opportunity post-graduation</p>
+					</div>
+
+					<div class="card">
+						<h3>💼 Availability</h3>
+						<p>Graduating 2026</p>
+						<p>Seeking summer 2025 internships</p>
+						<p>Part-time opportunities during school year</p>
+						<p>Full-time availability post-graduation</p>
+					</div>
+
+					<div class="card">
+						<h3>🎯 Career Interests</h3>
+						<p>Sports Marketing & Brand Management</p>
+						<p>Professional Sports Organizations (MLS, NWSL, etc.)</p>
+						<p>Event Operations & Fan Engagement</p>
+						<p>Community Relations & Athlete Programs</p>
+						<p>Digital Marketing & Social Media Strategy</p>
+					</div>
+				</div>
+
+				<div style="margin-top: 3em; padding: 2em; background: rgba(139, 47, 57, 0.1); border-left: 4px solid #8b2f39;">
+					<h3>Ready to Make an Impact</h3>
+					<p>As a bilingual marketing communications student with proven athletic leadership and hands-on sports industry experience, I bring a unique combination of strategic thinking, competitive drive, and authentic passion for sports culture. My background as a team captain and Region XV MVP demonstrates my ability to perform under pressure and inspire others, while my work with NYCFC, Volo Sports, and UNIS shows my commitment to building communities through sports.</p>
+					
+					<p>Whether it's creating engaging content, coordinating events, or connecting with diverse audiences in English and Spanish, I'm ready to leverage my skills and experiences to drive results for your organization.</p>
+				</div>
+
+				<div style="text-align: center; margin-top: 3em;">
+					<ul class="actions">
+						<li><a href="/cdn-cgi/l/email-protection#f2868087c19797b2959f939b9edc919d9f" class="button">Get In Touch</a></li>
+						<li><a href="https://linkedin.com/in/true-eggers101" target="_blank" class="button">Connect on LinkedIn</a></li>
+					</ul>
+				</div>
+			</article>
+
+		</div>
+
+		<!-- Sidebar -->
+		<section id="sidebar">
+
+			<!-- Intro -->
+			<section id="intro">
+				<a href="#" class="logo">
+					<img src="https://via.placeholder.com/200x200/8b2f39/f5f5dc?text=TE" alt="True Eggers" />
+				</a>
+				<header>
+					<h2>True Eggers</h2>
+					<p>Marketing Communications Professional & Student-Athlete</p>
+				</header>
+			</section>
+
+			<!-- Quick Links -->
+			<section class="blurb">
+				<h2>Quick Links</h2>
+				<ul class="actions">
+					<li><a href="#about" class="button">About</a></li>
+					<li><a href="#experience" class="button">Experience</a></li>
+					<li><a href="#skills" class="button">Skills</a></li>
+					<li><a href="#projects" class="button">Projects</a></li>
+					<li><a href="#education" class="button">Education</a></li>
+					<li><a href="#contact" class="button">Contact</a></li>
+				</ul>
+			</section>
+
+			<!-- Languages -->
+			<section>
+				<div class="mini-post">
+					<header>
+						<h3>Languages</h3>
+					</header>
+					<p>
+						<strong>English:</strong> Fluency<br>
+						<strong>Spanish:</strong> Fluency
+					</p>
+				</div>
+			</section>
+
+			<!-- Volunteer Work -->
+			<section>
+				<div class="mini-post">
+					<header>
+						<h3>Volunteer Work</h3>
+					</header>
+					<p><strong>West Side Campaign Against Hunger</strong><br>
+					<em>June 2025 - Present</em></p>
+					<ul style="list-style: none; padding-left: 0;">
+						<li>Aid in poverty alleviation through packing and handing out fresh produce</li>
+						<li>Communicating with public in English and Spanish, serving as translator when needed</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<li><a href="https://linkedin.com/in/true-eggers101" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+					<li><a href="/cdn-cgi/l/email-protection#d1a5a3a4e2b4b491b6bcb0b8bdffb2bebc"><i class="fas fa-envelope"></i></a></li>
+					<li><a href="tel:+19173247360"><i class="fas fa-phone"></i></a></li>
+				</ul>
+				<p class="copyright">&copy; 2025 True Eggers. All rights reserved.</p>
+			</section>
+
+			<!-- Image Gallery Section -->
+			<section>
+				<h2 style="font-size: 0.9em; text-align: center; margin-bottom: 2em;">Gallery</h2>
+				
+				<!-- Image 1 -->
+				<div class="gallery-item">
+					<div class="gallery-image">
+						<img src="https://via.placeholder.com/400x300/8b2f39/f5f5dc?text=Image+1" alt="Gallery Image 1" />
+					</div>
+					<p class="gallery-caption">Add your description for image 1 here</p>
+				</div>
+
+				<!-- Image 2 -->
+				<div class="gallery-item">
+					<div class="gallery-image">
+						<img src="https://via.placeholder.com/400x300/8b2f39/f5f5dc?text=Image+2" alt="Gallery Image 2" />
+					</div>
+					<p class="gallery-caption">Add your description for image 2 here</p>
+				</div>
+
+				<!-- Image 3 -->
+				<div class="gallery-item">
+					<div class="gallery-image">
+						<img src="https://via.placeholder.com/400x300/8b2f39/f5f5dc?text=Image+3" alt="Gallery Image 3" />
+					</div>
+					<p class="gallery-caption">Add your description for image 3 here</p>
+				</div>
+
+				<!-- Image 4 -->
+				<div class="gallery-item">
+					<div class="gallery-image">
+						<img src="https://via.placeholder.com/400x300/8b2f39/f5f5dc?text=Image+4" alt="Gallery Image 4" />
+					</div>
+					<p class="gallery-caption">Add your description for image 4 here</p>
+				</div>
+
+				<!-- Image 5 -->
+				<div class="gallery-item">
+					<div class="gallery-image">
+						<img src="https://via.placeholder.com/400x300/8b2f39/f5f5dc?text=Image+5" alt="Gallery Image 5" />
+					</div>
+					<p class="gallery-caption">Add your description for image 5 here</p>
+				</div>
+
+				<!-- Image 6 -->
+				<div class="gallery-item">
+					<div class="gallery-image">
+						<img src="https://via.placeholder.com/400x300/8b2f39/f5f5dc?text=Image+6" alt="Gallery Image 6" />
+					</div>
+					<p class="gallery-caption">Add your description for image 6 here</p>
+				</div>
+
+				<!-- Image 7 -->
+				<div class="gallery-item">
+					<div class="gallery-image">
+						<img src="https://via.placeholder.com/400x300/8b2f39/f5f5dc?text=Image+7" alt="Gallery Image 7" />
+					</div>
+					<p class="gallery-caption">Add your description for image 7 here</p>
+				</div>
+			</section>
+
+		</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+		// Smooth scrolling for anchor links
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+				const target = document.querySelector(this.getAttribute('href'));
+				if (target) {
+					target.scrollIntoView({
+						behavior: 'smooth',
+						block: 'start'
+					});
+					
+					// Update active tab
+					document.querySelectorAll('#header nav.links a').forEach(link => {
+						link.classList.remove('active');
+					});
+					this.classList.add('active');
+				}
+			});
+		});
+
+		// Highlight active section on scroll
+		window.addEventListener('scroll', function() {
+			let current = '';
+			const sections = document.querySelectorAll('.post');
+			
+			sections.forEach(section => {
+				const sectionTop = section.offsetTop;
+				const sectionHeight = section.clientHeight;
+				if (scrollY >= (sectionTop - 200)) {
