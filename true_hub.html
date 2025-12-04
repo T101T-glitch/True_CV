@@ -188,15 +188,27 @@
 			display: none;
 		}
 
-		/* Wrapper */
-		#wrapper {
-			display: flex;
-			flex-direction: row-reverse;
-			margin: 0 auto;
-			max-width: 100%;
-			padding: 4.5em;
-			width: 90em;
-		}
+		/* Standings Table Styling */
+		.standings { font-size:0.65em; }
+		.standings table { width:100%; border-collapse:collapse; background:rgba(255,255,255,0.85); border:1px solid #d4c4b0; border-radius:8px; overflow:hidden; }
+		.standings thead th { text-align:left; padding:0.55em 0.5em; font-size:0.55em; letter-spacing:0.2em; color:#8b2f39; text-transform:uppercase; background:#f5f5dc; border-bottom:2px solid #8b2f39; }
+		.standings tbody td { padding:0.5em 0.5em; border-bottom:1px dotted rgba(139,47,57,0.25); }
+		.standings tbody tr:last-child td { border-bottom:none; }
+		.standings tbody tr.highlight { background:rgba(139,47,57,0.10); font-weight:600; }
+		.standings tbody tr:nth-child(even):not(.highlight) { background:rgba(139,47,57,0.04); }
+		.standings caption { caption-side:bottom; padding:0.6em 0 0; font-size:0.55em; text-align:center; }
+		.standings td img.crest { height:18px; vertical-align:middle; margin-right:6px; filter:drop-shadow(0 0 1px rgba(0,0,0,0.2)); }
+		@media (max-width: 900px){ .standings thead th:nth-child(3), .standings tbody td:nth-child(3){ display:none; } }
+
+			/* Wrapper */
+			#wrapper {
+				display: flex;
+				flex-direction: row-reverse;
+				margin: 0 auto;
+				max-width: 100%;
+				padding: 3em;
+				width: 80em;
+			}
 
 		/* Main */
 		#main {
@@ -211,11 +223,11 @@
 			width: 22em;
 		}
 
-		#sidebar > section {
-			border-top: solid 2px rgba(139, 47, 57, 0.3);
-			margin: 3em 0 0 0;
-			padding: 3em 0 0 0;
-		}
+			#sidebar > section {
+				border-top: solid 2px rgba(139, 47, 57, 0.3);
+				margin: 2em 0 0 0;
+				padding: 2em 0 0 0;
+			}
 
 		#sidebar > section:first-child {
 			border-top: 0;
@@ -255,12 +267,42 @@
 			color: #6b4423;
 		}
 
-		/* Post */
-		.post {
-			padding: 3em 0;
+		/* Welcome Title Box */
+		.welcome-title {
+			background: linear-gradient(135deg, rgba(139, 47, 57, 0.9) 0%, rgba(107, 68, 35, 0.9) 100%);
+			color: #f5f5dc;
+			padding: 2em;
+			margin: 0 0 2em 0;
+			text-align: center;
+			border: 2px solid #8b2f39;
+			border-radius: 8px;
 		}
 
-		.post header {
+		.welcome-title h1 {
+			font-size: 2.8em;
+			font-family: 'Raleway', Helvetica, sans-serif;
+			font-weight: 900;
+			letter-spacing: 0.15em;
+			text-transform: uppercase;
+			margin: 0;
+			color: #f5f5dc;
+			line-height: 1.3;
+		}
+
+		/* Split heading: "WELCOME TO" smaller, "TRUE'S HUB" larger */
+		.welcome-title .welcome-small {
+			font-size: 0.5em;
+			font-weight: 700;
+			letter-spacing: 0.2em;
+			display: block;
+			margin-bottom: 0.2em;
+		}
+
+		/* Post */
+		.post {
+			padding: 2em 0;
+			margin-bottom: 1.5em;
+		}		.post header {
 			display: flex;
 			align-items: flex-start;
 			margin: 0 0 2em 0;
@@ -293,13 +335,13 @@
 			margin: 2em 0;
 		}
 
-		.card {
-			background: rgba(255, 255, 255, 0.8);
-			border: solid 2px rgba(139, 47, 57, 0.2);
-			padding: 2em;
-			transition: transform 0.2s ease, box-shadow 0.2s ease;
-			box-shadow: 0 2px 10px rgba(139, 47, 57, 0.1);
-		}
+			.card {
+				background: rgba(255, 255, 255, 0.8);
+				border: solid 2px rgba(139, 47, 57, 0.2);
+				padding: 1.5em;
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+				box-shadow: 0 2px 10px rgba(139, 47, 57, 0.1);
+			}
 
 		.card:hover {
 			transform: translateY(-5px);
@@ -327,13 +369,13 @@
 		}
 
 		/* Experience Card */
-		.experience-card {
-			background: rgba(255, 255, 255, 0.8);
-			border: solid 2px rgba(139, 47, 57, 0.2);
-			padding: 2em;
-			margin-bottom: 2em;
-			box-shadow: 0 2px 10px rgba(139, 47, 57, 0.1);
-		}
+			.experience-card {
+				background: rgba(255, 255, 255, 0.8);
+				border: solid 2px rgba(139, 47, 57, 0.2);
+				padding: 1.5em;
+				margin-bottom: 1.5em;
+				box-shadow: 0 2px 10px rgba(139, 47, 57, 0.1);
+			}
 
 		.experience-card h3 {
 			color: #8b2f39;
@@ -343,7 +385,7 @@
 		.experience-card h4 {
 			color: #6b4423;
 			font-size: 0.8em;
-			margin: 0.5em 0;
+			margin: 0;
 		}
 
 		.experience-card .date {
@@ -356,13 +398,25 @@
 		}
 
 		/* Education Card */
-		.education-card {
-			background: rgba(255, 255, 255, 0.8);
-			border: solid 2px rgba(139, 47, 57, 0.2);
-			padding: 2em;
-			margin-bottom: 2em;
-			box-shadow: 0 2px 10px rgba(139, 47, 57, 0.1);
-		}
+			.education-card {
+				background: rgba(255, 255, 255, 0.8);
+				border: solid 2px rgba(139, 47, 57, 0.2);
+				padding: 1.5em;
+				margin-bottom: 1.5em;
+				box-shadow: 0 2px 10px rgba(139, 47, 57, 0.1);
+			}
+
+			/* Ensure bullet lists aren't flush against the card border */
+			.education-card ul,
+			.experience-card ul {
+				padding-left: 1.25em;
+				margin: 0;
+			}
+
+			.education-card ul li,
+			.experience-card ul li {
+				padding: 0.35em 0;
+			}
 
 		.education-card h3 {
 			color: #8b2f39;
@@ -372,7 +426,7 @@
 		.education-card h4 {
 			color: #6b4423;
 			font-size: 0.8em;
-			margin: 0.5em 0;
+			margin: 0;
 		}
 
 		/* Blurb */
@@ -443,14 +497,12 @@
 			text-transform: uppercase;
 		}
 
-		/* Actions */
-		.actions {
-			cursor: default;
-			list-style: none;
-			padding-left: 0;
-		}
-
-		.actions li {
+	/* Actions */
+	.actions {
+		cursor: default;
+		list-style: none;
+		padding-left: 0;
+	}		.actions li {
 			display: inline-block;
 			padding: 0 1em 0 0;
 			vertical-align: middle;
@@ -605,6 +657,55 @@
 			transform: scale(1.05);
 		}
 
+			/* Pair layout for overlapping related images */
+			/* Pair layout: display images side-by-side with a small gap */
+			.gallery-pair {
+				display: flex;
+				align-items: stretch;
+				gap: 12px; /* space between images */
+				max-width: 900px; /* larger pair for bigger images */
+				margin: 0 auto 1.5em;
+			}
+
+			.gallery-pair .gallery-image {
+				width: 50%;
+				box-sizing: border-box;
+			}
+
+			/* Remove overlap behavior; keep subtle shadow for depth */
+			.gallery-pair .gallery-image img {
+				box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+				border-radius: 6px;
+			}
+
+			/* Responsive: stack vertically on small screens */
+			@media screen and (max-width: 700px) {
+				.gallery-pair {
+					flex-direction: column;
+					gap: 8px;
+					max-width: 100%;
+				}
+				.gallery-pair .gallery-image {
+					width: 100%;
+				}
+			}
+
+			/* Make single gallery items larger and centered */
+			.gallery-item {
+				max-width: 900px;
+				margin: 0 auto 1.5em;
+			}
+
+			.gallery-image img {
+				border-radius: 6px;
+			}
+
+			/* Shared caption for a pair should sit under the combined images */
+			.gallery-pair + .gallery-caption {
+				margin-top: 0.5em;
+				text-align: center;
+			}
+
 		.gallery-caption {
 			font-size: 0.8em;
 			color: #6b4423;
@@ -612,6 +713,45 @@
 			margin: 0.5em 0 0 0;
 			text-align: center;
 		}
+
+		/* Spotify embed styling */
+		.spotify-embed {
+			max-width: 100%;
+			margin: 1em auto;
+		}
+		.spotify-embed iframe {
+			width: 100%;
+			height: 380px;
+			border-radius: 6px;
+			border: 0;
+		}
+
+		/* Favorite Teams cards */
+		.favorite-teams .team-card {
+			background: rgba(255, 255, 255, 0.8);
+			border: solid 2px rgba(139, 47, 57, 0.2);
+			padding: 1.25em;
+			margin-bottom: 1em;
+			box-shadow: 0 2px 10px rgba(139,47,57,0.1);
+		}
+		.favorite-teams .team-card h3 {
+			margin: 0 0 0.5em 0;
+			font-size: 1em;
+			color: #8b2f39;
+			letter-spacing: 0.15em;
+		}
+		.favorite-teams .team-card ul {
+			list-style: none;
+			padding-left: 0;
+			margin: 0;
+		}
+		.favorite-teams .team-card ul li {
+			padding: 0.35em 0;
+			border-bottom: dotted 1px rgba(139,47,57,0.2);
+			font-size: 0.7em;
+			letter-spacing: 0.05em;
+		}
+		.favorite-teams .team-card ul li:last-child { border-bottom: 0; }
 	</style>
 </head>
 <body class="is-preload">
@@ -624,7 +764,6 @@
 				<li><a href="#about">About</a></li>
 				<li><a href="#experience">Experience</a></li>
 				<li><a href="#skills">Skills</a></li>
-				<li><a href="#projects">Projects</a></li>
 				<li><a href="#education">Education</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
@@ -644,19 +783,57 @@
 		<!-- Main -->
 		<div id="main">
 
-			<!-- About Section -->
-			<article id="about" class="post">
+		<!-- Welcome Title Box -->
+		<section class="welcome-title">
+			<h1><span class="welcome-small">WELCOME TO</span>TRUE'S HUB</h1>
+		</section>
+
+		<!-- Education Section (moved before Experience) -->
+			<article id="education" class="post">
 				<header>
 					<div class="title">
-						<h2>About Me</h2>
-						<p>Marketing Communications Professional & Student-Athlete</p>
+						<h2>Education</h2>
 					</div>
 				</header>
-				<p>Currently pursuing a degree in <span class="highlight">Advertising and Marketing Communications</span> at the Fashion Institute of Technology, I combine strategic marketing expertise with authentic sports industry experience. As a bilingual professional fluent in English and Spanish, I bridge cultures and communities through compelling brand narratives.</p>
-				
-				<p>My background as a <span class="highlight">Division III student-athlete</span> and team captain has shaped my approach to marketing—discipline, teamwork, and the drive to exceed expectations. From working with professional teams like <span class="highlight">New York City FC</span> to grassroots sports organizations, I understand how sports unite people and build lasting community connections.</p>
-				
-				<p>I'm passionate about leveraging marketing to enhance fan engagement, build authentic brand partnerships, and create memorable experiences that resonate with diverse audiences. Whether it's developing digital content strategies, coordinating live events, or executing community outreach initiatives, I bring energy, creativity, and a results-driven mindset to every project.</p>
+
+			<div class="education-card">
+				<h3>Fashion Institute of Technology (FIT)</h3>
+				<h4>Bachelor of Science in Advertising and Marketing Communications</h4>
+				<div class="date">2024 - 2026 | New York, NY</div>
+				<strong>Minor:</strong> Psychology
+				<ul>
+					<li>Dean's List 2024, 2025</li>
+					<li>Phi Theta Kappa Honors Society</li>
+					<li>Captains of Women's Soccer Team</li>
+					<li>2024 Region XV Player of the Year and MVP</li>
+				</ul>
+				<strong>Relevant Coursework:</strong> 
+				<ul>
+					<li>Programming for Mobile Apps</li>
+					<li>Large Language Models and Data Science</li>
+					<li>Marketing Research & Analytics</li>
+					<li>Integrated Marketing Communications</li>
+					<li>Creative Strategy & Copywriting</li>
+				</ul>
+			</div>				<div class="education-card">
+				<h3>Universitat de Barcelona</h3>
+				<h4>School of Economics and Business</h4>
+				<div class="date">Spring 2025 | Barcelona, Spain</div>
+				<ul>
+					<li>Gilman Scholarship Recipient</li>
+					<li>International business and marketing coursework</li>
+					<li>European market analysis</li>
+				</ul>
+			</div>				<div class="education-card">
+					<h3>Farmingdale State College</h3>
+					<h4>Architectural Engineering Major</h4>
+					<div class="date">2022 - 2024 | Long Island, NY</div>
+					<ul>
+						<li>President's List 2022-2024</li>			
+						<li>Women's Soccer Team Member</li>			
+						<li>Balanced engineering studies with competitive athletics</li>
+					</ul>
+				</div>
 			</article>
 
 			<!-- Experience Section -->
@@ -664,15 +841,13 @@
 				<header>
 					<div class="title">
 						<h2>Professional Experience</h2>
-						<p>Building Communities Through Sports</p>
-					</div>
 				</header>
 
 				<div class="experience-card">
 					<div class="date">Aug. 2025 - Present</div>
-					<h3>United Nations International School (UNIS)</h3>
-					<h4>Girls' High School Varsity Coach</h4>
-					<p><strong>Location:</strong> New York, NY</p>
+					<h3>Girls' High School Varsity Coach</h3>
+					<h4>United Nations International School (UNIS)</h4>
+					<strong>Location:</strong> New York, NY
 					<ul>
 						<li>Develop and lead custom training sessions tailored to high school varsity soccer</li>
 						<li>Analyze game footage and apply findings to video sessions and training sessions to improve team performance</li>
@@ -682,9 +857,9 @@
 
 				<div class="experience-card">
 					<div class="date">May 2024 - Present</div>
-					<h3>New York City Football Club (NYCFC)</h3>
-					<h4>Street Team and Match Presentation</h4>
-					<p><strong>Location:</strong> New York, NY</p>
+					<h3>Street Team and Match Presentation</h3>
+					<h4>New York City Football Club (NYCFC)</h4>
+					<strong>Location:</strong> New York, NY
 					<ul>
 						<li>Serve as ambassador for club at community building events communicating in English and Spanish</li>
 						<li>Execute operational tasks so events run smoothly</li>
@@ -694,9 +869,9 @@
 
 				<div class="experience-card">
 					<div class="date">May 2024 - Jan 2025</div>
-					<h3>Volo Sports</h3>
-					<h4>Membership Marketing and Sales Associate</h4>
-					<p><strong>Location:</strong> New York, NY</p>
+					<h3>Membership Marketing and Sales Associate</h3>
+					<h4>Volo Sports</h4>
+					<strong>Location:</strong> New York, NY
 					<ul>
 						<li>Built and Maintained daily programs within tech system, keeping digital record using Excel</li>
 						<li>Created weekly and daily promotional content for email and mobile app distribution</li>
@@ -706,9 +881,9 @@
 
 				<div class="experience-card">
 					<div class="date">Jan 2025 - May 2025</div>
-					<h3>Fashion Institute of Technology</h3>
-					<h4>Administrative Assistant in Payroll Office</h4>
-					<p><strong>Location:</strong> New York, NY</p>
+					<h3>Administrative Assistant in Payroll Office</h3>
+					<h4>Fashion Institute of Technology</h4>
+					<strong>Location:</strong> New York, NY
 					<ul>
 						<li>Digitized thousands of files and developed excel system for digital recording</li>
 						<li>Converted PDF's into fillable documents using Adobe Illustrator</li>
@@ -717,17 +892,29 @@
 
 				<div class="experience-card">
 					<div class="date">Nov 2022 - May 2023</div>
-					<h3>SUSA Soccer Academy</h3>
-					<h4>Youth Soccer Coach</h4>
-					<p><strong>Location:</strong> Central Islip, NY</p>
+					<h3>Youth Soccer Coach</h3>
+					<h4>SUSA Soccer Academy</h4>
+					<strong>Location:</strong> Central Islip, NY
 					<ul>
 						<li>Developed training sessions for children aged 2-14</li>
 						<li>Designated field space for children based on age group and skill levels</li>
 					</ul>
-					<p><strong>Field Marshall</strong></p>
+					<strong>Field Marshall</strong>
 					<ul>
 						<li>Collected statistics from multiple games at the same time and uploaded assists, goals, fouls, red/yellow cards, shots, and shots on goal to Excel spreadsheet</li>
 					</ul>
+				</div>
+
+				<div class="experience-card">
+					<div class="date">Freelance</div>
+					<h3>Film Maker</h3>
+					<h4>Ocean Beach Historical Society</h4>
+					<strong>Location:</strong> Ocean Beach, NY
+					<ul>
+						<li>Created 15 minute long documentary for 100 year aniversay community event</li>
+						<li>Compiled over 50 interviews and archival footage</li>
+						<li>Researched historical archives and community stories to ensure accuracy and depth in the documentary</li>
+				
 				</div>
 			</article>
 
@@ -759,11 +946,9 @@
 						<h3>Digital & Technical</h3>
 						<ul>
 							<li>Adobe Creative Suite (Illustrator, Photoshop)</li>
-							<li>Microsoft Excel (Data Management)</li>
-							<li>Digital Content Management Systems</li>
-							<li>Social Media Platforms & Analytics</li>
-							<li>Email Marketing Tools</li>
-							<li>Basic Web Design Principles</li>
+							<li>AutoCAD</li>
+							<li>Microsoft Office Suite</li>							<li>Social Media Platforms & Analytics</li>
+							<li>LLM Prompting</li>
 							<li>Video Editing & Analysis</li>
 							<li>Database Management</li>
 						</ul>
@@ -776,8 +961,6 @@
 							<li>Sports Event Operations</li>
 							<li>Athlete Program Development</li>
 							<li>Game Day Activations</li>
-							<li>Community Relations</li>
-							<li>Grassroots Marketing</li>
 							<li>Team Leadership & Coaching</li>
 							<li>Performance Analysis</li>
 						</ul>
@@ -791,139 +974,24 @@
 							<li>Team Leadership & Collaboration</li>
 							<li>Project Management</li>
 							<li>Time Management</li>
-							<li>Public Speaking & Presentation</li>
-							<li>Problem-Solving Under Pressure</li>
-							<li>Adaptability & Initiative</li>
-						</ul>
-					</div>
-				</div>
-			</article>
-
-			<!-- Projects Section -->
-			<article id="projects" class="post">
-				<header>
-					<div class="title">
-						<h2>Key Projects & Initiatives</h2>
-						<p>Marketing Campaigns & Community Impact</p>
-					</div>
-				</header>
-
-				<div class="projects-grid">
-					<div class="card">
-						<h3>NYCFC Community Activations</h3>
-						<p><strong>Role:</strong> Street Team Ambassador</p>
-						<p>Executed bilingual (English/Spanish) fan engagement initiatives at community events, creating memorable brand experiences that strengthened NYCFC's connection with diverse NYC neighborhoods. Managed event logistics and activations for match day presentations.</p>
-					</div>
-
-					<div class="card">
-						<h3>Volo Sports Membership Growth Campaign</h3>
-						<p><strong>Role:</strong> Marketing & Sales Associate</p>
-						<p>Developed and distributed weekly promotional content across email and mobile platforms. Conducted market research and implemented grassroots marketing strategies that enhanced member experience and drove community participation in recreational sports leagues.</p>
-					</div>
-
-					<div class="card">
-						<h3>Youth Soccer Development Program</h3>
-						<p><strong>Role:</strong> Varsity Coach & Youth Trainer</p>
-						<p>Created age-appropriate training curricula for athletes ranging from 2-14 years old and high school varsity level. Utilized video analysis to improve team performance and fostered inclusive, safe environments prioritizing player development and health.</p>
-					</div>
-
-					<div class="card">
-						<h3>Digital Systems Optimization - FIT Payroll</h3>
-						<p><strong>Role:</strong> Administrative Assistant</p>
-						<p>Digitized thousands of files and developed Excel-based tracking systems for improved operational efficiency. Created fillable PDF documents using Adobe Illustrator to streamline administrative processes.</p>
-					</div>
-
-					<div class="card">
-						<h3>Statistical Analysis & Reporting</h3>
-						<p><strong>Role:</strong> Field Marshall - SUSA Soccer Academy</p>
-						<p>Managed real-time data collection across multiple simultaneous games, tracking goals, assists, fouls, cards, and shots. Developed Excel-based reporting systems to provide coaches with actionable performance insights.</p>
-					</div>
-
-					<div class="card">
-						<h3>Volunteer Community Outreach</h3>
-						<p><strong>Role:</strong> West Side Campaign Against Hunger</p>
-						<p>Provided bilingual support for poverty alleviation efforts, serving as translator and facilitating communication with English and Spanish-speaking community members in need of assistance.</p>
-					</div>
-				</div>
-			</article>
-
-			<!-- Education Section -->
-			<article id="education" class="post">
-				<header>
-					<div class="title">
-						<h2>Education</h2>
-						<p>Academic Excellence & Athletic Achievement</p>
-					</div>
-				</header>
-
-				<div class="education-card">
-					<h3>Fashion Institute of Technology (FIT)</h3>
-					<h4>Bachelor of Science in Advertising and Marketing Communications</h4>
-					<div class="date">2024 - 2026 | New York, NY</div>
-					<p><strong>Minor:</strong> Psychology</p>
-					<p><strong>Academic Honors:</strong></p>
-					<ul>
-						<li>Dean's List 2024, 2025</li>
-						<li>Phi Theta Kappa Honors Society</li>
-						<li>Captains of Women's Soccer Team</li>
-						<li>2024 Region XV Player of the Year and MVP</li>
-					</ul>
-					<p><strong>Relevant Coursework:</strong></p>
-					<ul>
-						<li>Consumer Behavior & Psychology</li>
-						<li>Digital Marketing Strategies</li>
-						<li>Brand Management</li>
-						<li>Marketing Research & Analytics</li>
-						<li>Integrated Marketing Communications</li>
-						<li>Social Media Marketing</li>
-						<li>Creative Strategy & Copywriting</li>
-						<li>Global Marketing Perspectives</li>
+						<li>Public Speaking & Presentation</li>
+						<li>Problem-Solving Under Pressure</li>
+						<li>Adaptability & Initiative</li>
 					</ul>
 				</div>
+			</div>
+		</article>
 
-				<div class="education-card">
-					<h3>Universitat de Barcelona</h3>
-					<h4>School of Economics and Business</h4>
-					<div class="date">Spring 2025 | Barcelona, Spain</div>
-					<p><strong>Study Abroad Program:</strong></p>
-					<ul>
-						<li>Gilman Scholarship Recipient</li>
-						<li>International business and marketing coursework</li>
-						<li>Cross-cultural marketing strategies</li>
-						<li>European market analysis</li>
-					</ul>
+		<!-- Contact Section -->
+		<article id="contact" class="post">
+			<header>
+				<div class="title">
+					<h2>Let's Connect!</h2>
 				</div>
-
-				<div class="education-card">
-					<h3>Farmingdale State College</h3>
-					<h4>Architectural Engineering Major</h4>
-					<div class="date">2022 - 2024 | Long Island, NY</div>
-					<p>Excelled as a student-athlete, earning <strong>President's List honors</strong> while competing on the women's soccer team. Demonstrated exceptional ability to balance rigorous STEM coursework with Division III athletics, developing strong time management and discipline.</p>
-					<p><strong>Athletic & Academic Achievements:</strong></p>
-					<ul>
-						<li>President's List 2022-2024</li>
-						<li>Captain of Women's Soccer Team</li>
-						<li>2024 Region XV Player of the Year and MVP</li>
-						<li>Balanced engineering studies with competitive athletics</li>
-						<li>Leadership and teamwork excellence</li>
-						<li>Technical problem-solving skills from engineering coursework</li>
-					</ul>
-				</div>
-			</article>
-
-			<!-- Contact Section -->
-			<article id="contact" class="post">
-				<header>
-					<div class="title">
-						<h2>Let's Connect</h2>
-						<p>Available for Opportunities in Sports Marketing & Communications</p>
-					</div>
-				</header>
-
-				<div style="margin: 2em 0;">
+			</header>				<div style="margin: 2em 0;">
 					<h3>Contact Information</h3>
 					<p>
-						<strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#e6929493d58383a6818b878f8ac885898b"><span class="__cf_email__" data-cfemail="a7d3d5d294c2c2e7c0cac6cecb89c4c8ca">[email&#160;protected]</span></a><br>
+						<strong>Email:</strong> <a href="mailto:tru3ee@gmail.com">tru3ee@gmail.com</a><br>
 						<strong>Phone:</strong> <a href="tel:+19173247360">917-324-7360</a><br>
 						<strong>LinkedIn:</strong> <a href="https://linkedin.com/in/true-eggers101" target="_blank">linkedin.com/in/true-eggers101</a><br>
 						<strong>Location:</strong> New York City, NY
@@ -939,66 +1007,82 @@
 						<p>Willing to relocate for right opportunity post-graduation</p>
 					</div>
 
-					<div class="card">
-						<h3>💼 Availability</h3>
-						<p>Graduating 2026</p>
-						<p>Seeking summer 2025 internships</p>
-						<p>Part-time opportunities during school year</p>
-						<p>Full-time availability post-graduation</p>
-					</div>
 
-					<div class="card">
-						<h3>🎯 Career Interests</h3>
-						<p>Sports Marketing & Brand Management</p>
-						<p>Professional Sports Organizations (MLS, NWSL, etc.)</p>
-						<p>Event Operations & Fan Engagement</p>
-						<p>Community Relations & Athlete Programs</p>
-						<p>Digital Marketing & Social Media Strategy</p>
-					</div>
-				</div>
-
-				<div style="margin-top: 3em; padding: 2em; background: rgba(139, 47, 57, 0.1); border-left: 4px solid #8b2f39;">
-					<h3>Ready to Make an Impact</h3>
-					<p>As a bilingual marketing communications student with proven athletic leadership and hands-on sports industry experience, I bring a unique combination of strategic thinking, competitive drive, and authentic passion for sports culture. My background as a team captain and Region XV MVP demonstrates my ability to perform under pressure and inspire others, while my work with NYCFC, Volo Sports, and UNIS shows my commitment to building communities through sports.</p>
-					
-					<p>Whether it's creating engaging content, coordinating events, or connecting with diverse audiences in English and Spanish, I'm ready to leverage my skills and experiences to drive results for your organization.</p>
-				</div>
-
-				<div style="text-align: center; margin-top: 3em;">
-					<ul class="actions">
-						<li><a href="/cdn-cgi/l/email-protection#f2868087c19797b2959f939b9edc919d9f" class="button">Get In Touch</a></li>
-						<li><a href="https://linkedin.com/in/true-eggers101" target="_blank" class="button">Connect on LinkedIn</a></li>
-					</ul>
-				</div>
-			</article>
-
+			<div class="card">
+			<h3>💼 Availability</h3>
+			<p>Graduating 2026</p>
+			<p>Seeking summer 2025 internships</p>
+			<p>Part-time opportunities during school year</p>
+			<p>Full-time availability post-graduation</p>
 		</div>
+	</div>
 
-		<!-- Sidebar -->
+			<div style="text-align: center; margin-top: 3em;">
+			<ul class="actions" style="display: flex; justify-content: center;">
+				<li><a href="mailto:tru3ee@gmail.com" class="button">Get In Touch</a></li>
+				<li><a href="https://linkedin.com/in/true-eggers101" target="_blank" class="button">Connect on LinkedIn</a></li>
+			</ul>
+		</div>
+	</article>		</div>		<!-- Sidebar -->
 		<section id="sidebar">
 
 			<!-- Intro -->
 			<section id="intro">
 				<a href="#" class="logo">
-					<img src="https://via.placeholder.com/200x200/8b2f39/f5f5dc?text=TE" alt="True Eggers" />
+					<img src="images/caesar.jpeg" alt="True Eggers" />
 				</a>
 				<header>
 					<h2>True Eggers</h2>
-					<p>Marketing Communications Professional & Student-Athlete</p>
+					<p>Marketing Communications Professional</p>
 				</header>
 			</section>
 
-			<!-- Quick Links -->
-			<section class="blurb">
-				<h2>Quick Links</h2>
-				<ul class="actions">
-					<li><a href="#about" class="button">About</a></li>
-					<li><a href="#experience" class="button">Experience</a></li>
-					<li><a href="#skills" class="button">Skills</a></li>
-					<li><a href="#projects" class="button">Projects</a></li>
-					<li><a href="#education" class="button">Education</a></li>
-					<li><a href="#contact" class="button">Contact</a></li>
-				</ul>
+		<!-- Quick Links -->
+		<section class="blurb">
+			<h2>Quick Links</h2>
+			<ul class="actions">
+				<li><a href="#about" class="button">About</a></li>
+				<li><a href="#experience" class="button">Experience</a></li>
+				<li><a href="#skills" class="button">Skills</a></li>
+				<li><a href="#education" class="button">Education</a></li>
+				<li><a href="#contact" class="button">Contact</a></li>
+			</ul>
+		</section>			<!-- Favorite Teams -->
+			<section class="favorite-teams" style="margin-top:1.5em;">
+				<h2 style="font-size:0.9em; text-align:center; margin-bottom:0.8em;">How my favorite team is doing:</h2>
+				<div class="team-card" style="padding:0;">
+					<div class="league-standings standings">
+						<!-- Static snapshot (updated manually). HOW TO UPDATE: Replace placeholders with current data each Monday. Last updated: Nov 24, 2025. -->
+						<table>
+							<thead>
+								<tr>
+									<th>Pos</th>
+									<th>Club</th>
+									<th>P</th>
+									<th>GD</th>
+									<th>Pts</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Updated standings snapshot: Dec 4, 2025. Source: user-provided data. -->
+								<tr class="highlight"><td>1</td><td><img class="crest" src="https://crests.football-data.org/81.png" alt="FC Barcelona crest">FC Barcelona</td><td>13</td><td>21</td><td>31</td></tr>
+								<tr><td>2</td><td><img class="crest" src="https://crests.football-data.org/86.png" alt="Real Madrid crest">Real Madrid</td><td>13</td><td>16</td><td>32</td></tr>
+								<tr><td>3</td><td><img class="crest" src="https://crests.football-data.org/94.png" alt="Villarreal crest">Villarreal</td><td>13</td><td>15</td><td>29</td></tr>
+								<tr><td>4</td><td><img class="crest" src="https://crests.football-data.org/78.png" alt="Atlético Madrid crest">Atlético Madrid</td><td>13</td><td>14</td><td>28</td></tr>
+								<tr><td>5</td><td><img class="crest" src="https://crests.football-data.org/90.png" alt="Real Betis crest">Real Betis</td><td>13</td><td>6</td><td>21</td></tr>
+							</tbody>
+							<caption>Manual snapshot • <a href="https://www.google.com/search?q=la+liga+standings" target="_blank" rel="noopener" style="border-bottom:0; color:#8b2f39;">Full Table</a></caption>
+						</table>
+					</div>
+				</div>
+			</section>
+
+			<!-- Spotify Album Embed -->
+			<section id="spotify-embed-section" style="margin-top:1.5em;">
+				<h3 style="font-size:0.9em; text-align:center; margin-bottom:0.7em; color:#8b2f39;">Now Listening</h3>
+				<div class="spotify-embed">
+					<iframe src="https://open.spotify.com/embed/album/3SUEJULSGgBDG1j4GQhfYY" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+				</div>
 			</section>
 
 			<!-- Languages -->
@@ -1033,7 +1117,7 @@
 			<section id="footer">
 				<ul class="icons">
 					<li><a href="https://linkedin.com/in/true-eggers101" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-					<li><a href="/cdn-cgi/l/email-protection#d1a5a3a4e2b4b491b6bcb0b8bdffb2bebc"><i class="fas fa-envelope"></i></a></li>
+					<li><a href="mailto:tru3ee@gmail.com"><i class="fas fa-envelope"></i></a></li>
 					<li><a href="tel:+19173247360"><i class="fas fa-phone"></i></a></li>
 				</ul>
 				<p class="copyright">&copy; 2025 True Eggers. All rights reserved.</p>
@@ -1042,62 +1126,83 @@
 			<!-- Image Gallery Section -->
 			<section>
 				<h2 style="font-size: 0.9em; text-align: center; margin-bottom: 2em;">Gallery</h2>
-				
-				<!-- Image 1 -->
+
+				<!-- New placeholders: replace `src` with your own image files in `images/` -->
+				<!-- Placeholder Image A -->
 				<div class="gallery-item">
 					<div class="gallery-image">
-						<img src="https://via.placeholder.com/400x300/8b2f39/f5f5dc?text=Image+1" alt="Gallery Image 1" />
+						<img src="images/jpg.GroupSoccer.jpg" alt="FIT Womens Soccer Team" />
 					</div>
-					<p class="gallery-caption">Add your description for image 1 here</p>
+					<p class="gallery-caption">FIT Womens Soccer Team</p>
 				</div>
 
-				<!-- Image 2 -->
+				<!-- Placeholder Image B -->
 				<div class="gallery-item">
 					<div class="gallery-image">
-						<img src="https://via.placeholder.com/400x300/8b2f39/f5f5dc?text=Image+2" alt="Gallery Image 2" />
+						<img src="images/Screenshot 2025-11-24 at 3.33.28 PM.png" alt="New gallery image B" />
 					</div>
-					<p class="gallery-caption">Add your description for image 2 here</p>
+					<p class="gallery-caption">Astoria Flea Market Nov 2025</p>
+			</div>
+			
+			<!-- Image 1 -->
+			<div class="gallery-item">
+				<div class="gallery-image">
+					<img src="images/jpg.prat1.jpg" alt="Gallery Image 1" />
+				</div>
+			</div>
+
+			<!-- Image 2 -->
+			<div class="gallery-item">
+				<div class="gallery-image">
+					<img src="images/jpg.prat2.jpg" alt="Gallery Image 2" />
+				</div>
+				<p class="gallery-caption">After two important wins at Camp de Futbol CEM Julio Méndez, home field for AE Prat</p>
+			</div>
+
+			<!-- Image 3 -->
+			<div class="gallery-item">
+			<div class="gallery-image">
+				<img src="images/jpg.azores.jpg" alt="Gallery Image 3" />
+			</div>
+			<p class="gallery-caption">Finding a waterfall after a long hike in Saõ Miguel, Azores</p>
+		</div>
+
+		<!-- Image 4 -->
+		<div class="gallery-item">
+			<div class="gallery-image">
+				<img src="images/jpg.nycfooty.jpg" alt="Gallery Image 4" />
+			</div>
+		</div>
+
+		<!-- Image 5 -->
+		<div class="gallery-item">
+			<div class="gallery-image">
+				<img src="images/jpg.nycfoorywin.JPG" alt="Gallery Image 5" />
+			</div>
+			<p class="gallery-caption">CHAMPIONS OF CHELSEA PARK P2!</p>
+		</div>
+
+		<!-- Image 6 -->
+		<div class="gallery-item">
+			<div class="gallery-image">
+				<img src="images/jpg.PlayerOfYear.jpg" alt="Gallery Image 6" />
+			</div>
+			<p class="gallery-caption">Region 15 Player of the Year - click <a href="images/My Movie 2.MOV" target="_blank">HERE</a> to watch my highlight reel</p>
+		</div>				<!-- Image 7 -->
+				<div class="gallery-item">
+					<div class="gallery-image">
+						<img src="images/jpg.extra.HEIC" alt="Gallery Image 7" />
+					</div>
+					<p class="gallery-caption">Extra on set for Netflix movie</p>
+				</div>
+				<!-- Image 8 -->
+				<div class="gallery-item">
+					<div class="gallery-image">
+						<img src="images/jpg.surfing.JPG" alt="Gallery Image 8" />
+					</div>
+					<p class="gallery-caption">7am surfing at Rockaway Beach</p>
 				</div>
 
-				<!-- Image 3 -->
-				<div class="gallery-item">
-					<div class="gallery-image">
-						<img src="https://via.placeholder.com/400x300/8b2f39/f5f5dc?text=Image+3" alt="Gallery Image 3" />
-					</div>
-					<p class="gallery-caption">Add your description for image 3 here</p>
-				</div>
-
-				<!-- Image 4 -->
-				<div class="gallery-item">
-					<div class="gallery-image">
-						<img src="https://via.placeholder.com/400x300/8b2f39/f5f5dc?text=Image+4" alt="Gallery Image 4" />
-					</div>
-					<p class="gallery-caption">Add your description for image 4 here</p>
-				</div>
-
-				<!-- Image 5 -->
-				<div class="gallery-item">
-					<div class="gallery-image">
-						<img src="https://via.placeholder.com/400x300/8b2f39/f5f5dc?text=Image+5" alt="Gallery Image 5" />
-					</div>
-					<p class="gallery-caption">Add your description for image 5 here</p>
-				</div>
-
-				<!-- Image 6 -->
-				<div class="gallery-item">
-					<div class="gallery-image">
-						<img src="https://via.placeholder.com/400x300/8b2f39/f5f5dc?text=Image+6" alt="Gallery Image 6" />
-					</div>
-					<p class="gallery-caption">Add your description for image 6 here</p>
-				</div>
-
-				<!-- Image 7 -->
-				<div class="gallery-item">
-					<div class="gallery-image">
-						<img src="https://via.placeholder.com/400x300/8b2f39/f5f5dc?text=Image+7" alt="Gallery Image 7" />
-					</div>
-					<p class="gallery-caption">Add your description for image 7 here</p>
-				</div>
 			</section>
 
 		</section>
@@ -1105,33 +1210,39 @@
 	</div>
 
 	<!-- Scripts -->
-	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-		// Smooth scrolling for anchor links
-		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-			anchor.addEventListener('click', function (e) {
-				e.preventDefault();
-				const target = document.querySelector(this.getAttribute('href'));
-				if (target) {
-					target.scrollIntoView({
-						behavior: 'smooth',
-						block: 'start'
-					});
-					
-					// Update active tab
-					document.querySelectorAll('#header nav.links a').forEach(link => {
-						link.classList.remove('active');
-					});
-					this.classList.add('active');
-				}
-			});
+	<script>
+	// Smooth scrolling + active nav highlight
+	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+		anchor.addEventListener('click', function (e) {
+			e.preventDefault();
+			const target = document.querySelector(this.getAttribute('href'));
+			if (target) {
+				target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				document.querySelectorAll('#header nav.links a').forEach(link => link.classList.remove('active'));
+				this.classList.add('active');
+			}
 		});
+	});
 
-		// Highlight active section on scroll
-		window.addEventListener('scroll', function() {
-			let current = '';
-			const sections = document.querySelectorAll('.post');
-			
-			sections.forEach(section => {
-				const sectionTop = section.offsetTop;
-				const sectionHeight = section.clientHeight;
-				if (scrollY >= (sectionTop - 200)) {
+	// Highlight nav link on scroll
+	const sections = document.querySelectorAll('article');
+	const navLinks = document.querySelectorAll('#header nav.links a');
+	function updateActiveOnScroll(){
+		const scrollPos = window.scrollY + 120; // offset for header
+		sections.forEach(sec => {
+			if (sec.offsetTop <= scrollPos && (sec.offsetTop + sec.offsetHeight) > scrollPos) {
+				const id = sec.getAttribute('id');
+				navLinks.forEach(l => l.classList.remove('active'));
+				const active = document.querySelector(`#header nav.links a[href="#${id}"]`);
+				if (active) active.classList.add('active');
+			}
+		});
+	}
+	window.addEventListener('scroll', updateActiveOnScroll);
+	updateActiveOnScroll();
+
+	// Static La Liga snapshot table in markup (no live fetch).
+	</script>
+
+	</body>
+	</html>
